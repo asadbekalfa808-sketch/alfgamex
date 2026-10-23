@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alfgamex Studio | Mustaqil O'yinlar va Qulay Ilovalar</title>
+  <meta name="description" content="Alfgamex Studio rasmiy veb-sayti. Mustaqil game dasturchi Alfa tomonidan yaratilgan Google Play o'yinlari va ilovalari: Memory Brain Training va TestMaker.TXT.">
+  <meta name="keywords" content="Alfgamex, Alfa, game developer, Memory Brain Training, TestMaker.TXT, indie game studio, o'zbek game dev">
+  <meta name="author" content="Alfa - Alfgamex Studio">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Alfgamex Studio - Mustaqil O'yin va Ilovalar">
+  <meta property="og:description" content="Dasturchi Alfa tomonidan ishlab chiqilgan Memory va TestMaker.TXT loyihalari.">
+  <meta property="og:image" content="assets/images/memory-icon.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/memory-icon.png">
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+  <div class="top-announcement">
+    <div class="container announcement-content">
+      <div class="est-badge">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Asos solingan sana: <strong>17-fevral, 2025-yil</strong></span>
+      </div>
+      <div class="studio-status">
+        <span class="pulse-dot"></span>
+        <span>Mustaqil (Solo) Indie Game Studio &bull; Faol ishlanmalar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SKY BLUE NEON GLASS NAVBAR ==================== -->
+  <header class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar">
+        <!-- LOGO: alf (ko'k) + game (oq) + x (ko'k) -->
+        <a href="#home" class="brand-logo" aria-label="Alfgamex Studio Bosh Sahifa">
+          <div class="logo-icon-wrap">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <div class="logo-text">
+            <span class="part-alf">alf</span><span class="part-game">game</span><span class="part-x">x</span>
+            <span class="logo-badge">STUDIO</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Asosiy</a></li>
+          <li><a href="#about" class="nav-link"><i class="fa-solid fa-user-ninja"></i> Biz haqimizda</a></li>
+          <li><a href="#projects" class="nav-link"><i class="fa-solid fa-cubes"></i> O'yin & Ilovalar</a></li>
+          <li><a href="#features" class="nav-link"><i class="fa-solid fa-wand-magic-sparkles"></i> Afzalliklar</a></li>
+          <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Aloqa</a></li>
+        </ul>
+
+        <!-- Right Quick Play Link -->
+        <div class="nav-actions">
+          <a href="#projects" class="btn-nav-action">
+            <i class="fa-brands fa-google-play"></i>
+            <span>Google Play</span>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menyuni ochish">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="home">
+    <!-- Background glowing ambient spheres -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <!-- Founding date badge in Hero -->
+        <div class="hero-badge">
+          <i class="fa-solid fa-rocket"></i>
+          <span>Alfgamex Studio &bull; 17-Fevral, 2025</span>
+        </div>
+
+        <!-- Big Title: alfgamex STUDIO -->
+        <h1 class="hero-title">
+          <span class="brand-huge">
+            <span class="huge-alf">alf</span><span class="huge-game">game</span><span class="huge-x">x</span>
+          </span>
+          <span class="hero-subtitle-tag">STUDIO</span>
+        </h1>
+
+        <p class="hero-lead">
+          Mustaqil o'yin dasturchisi <strong>Alfa</strong> tomonidan yaratilgan intellektual mobil o'yinlar va qulay kundalik ilovalar maskani. Biz har bir loyihaga mehr va zamonaviy ijodkorlikni jamlaymiz.
+        </p>
+
+        <!-- The 2 Required Action Buttons -->
+        <div class="hero-buttons">
+          <!-- Button 1: Biz haqimizda -->
+          <a href="#about" class="btn btn-sky-outline">
+            <i class="fa-solid fa-user-astronaut"></i>
+            <span>Biz haqimizda</span>
+          </a>
+
+          <!-- Button 2: Bizning o'yin va ilovalarimiz -->
+          <a href="#projects" class="btn btn-sky-solid">
+            <i class="fa-solid fa-shapes"></i>
+            <span>Bizning o'yin va ilovalarimiz</span>
+          </a>
+        </div>
+
+        <!-- Studio Quick Highlights -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Haqiqiy Play Store Loyihalari</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Solo Indie Ishlanma</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-number">2025</div>
+            <div class="stat-label">17-Fevralda Asos Solingan</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Preview Cards -->
+      <div class="hero-preview">
+        <div class="preview-glass-card preview-card-1">
+          <div class="preview-badge"><i class="fa-solid fa-brain"></i> Mantiqiy O'yin</div>
+          <div class="preview-item">
+            <img src="assets/images/memory-icon.png" alt="Memory Brain Training Game" class="preview-img" onerror="this.src='https://play-lh.googleusercontent.com/iioHPC_Sc6TudoPKwiEHXhkaefibeuf__0RWmnrg8wX9CVNMIG8nXzxOYNYmH5sQENqZmk4FYDZ6_vJcXCu4mA=s360'">
+            <div>
+              <h4>Memory</h4>
+              <p>Brain Training Game</p>
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>5.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-glass-card preview-card-2">
+          <div class="preview-badge"><i class="fa-solid fa-file-lines"></i> Ta'lim & Test</div>
+          <div class="preview-item">
+            <img src="assets/images/testmaker-icon.png" alt="TestMaker.TXT App" class="preview-img" onerror="this.src='https://play-lh.googleusercontent.com/JTljdnzJghPdMxJR1rNX0iAFsKCkIwlQasx5Xbdd50EbjeBeuFdXr8-L_BfB9rZ_1QmPCnNjjaUU6loTCZCvzg=s360'">
+            <div>
+              <h4>TestMaker.TXT</h4>
+              <p>Tezkor Test Yaratuvchi</p>
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>5.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BIZ HAQIMIZDA (ABOUT US & DEVELOPER ALFA) ==================== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-id-card"></i> Indie Game Studio</span>
+        <h2 class="section-title">Biz haqimizda & Dasturchi Alfa</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          Alfgamex Studio — g'oyadan haqiqiy mahsulotgacha o'z kuchi bilan yetib kelgan mustaqil dasturchining ijodiy platformasi.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Developer Profile Card -->
+        <div class="about-profile-card">
+          <div class="profile-avatar-wrap">
+            <div class="avatar-ring">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <div class="status-online" title="Dasturlash jarayonida"></div>
+          </div>
+
+          <h3 class="profile-name">Alfa</h3>
+          <p class="profile-role">Mustaqil Game & Ilova Dasturchisi (Solo Indie Dev)</p>
+          <div class="profile-badges">
+            <span class="badge-pill"><i class="fa-solid fa-gamepad"></i> Game Dev</span>
+            <span class="badge-pill"><i class="fa-brands fa-android"></i> Android Dev</span>
+            <span class="badge-pill"><i class="fa-solid fa-compass-drafting"></i> UI/UX</span>
+          </div>
+
+          <div class="profile-details-list">
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-calendar-day"></i> Asos solingan:</span>
+              <span class="detail-value">17-fevral, 2025-yil</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-code-branch"></i> Ishlash formati:</span>
+              <span class="detail-value">Yolg'iz (Solo Developer)</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-bullseye"></i> Asosiy yo'nalish:</span>
+              <span class="detail-value">Mobile Games & Utility Apps</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-brands fa-google-play"></i> Tarqatish do'koni:</span>
+              <span class="detail-value">Google Play Store</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story and Studio Philosophy -->
+        <div class="about-story-card">
+          <h3 class="story-title">Alfgamex Tarixi va Maqsadi</h3>
+          <p class="story-text">
+            <strong>2025-yilning 17-fevralida</strong> Alfgamex studiyasiga asos solindi. Men yangi mustaqil game dasturchiman va barcha loyihalarni noldan boshlab yolg'iz (solo) ishlab chiqaman. 
+          </p>
+          <p class="story-text">
+            Hozirda Google Play do'konida <strong>2 ta to'liq real loyiham</strong> muvaffaqiyatli nashr etilgan. Men uchun har bir loyiha shunchaki kod emas — bu aql charxlovchi mantiq, qulay interfeys va insonlarning vaqtini unumli o'tkazishga ko'maklashuvchi yechimdir.
+          </p>
+
+          <div class="studio-values-grid">
+            <div class="value-item">
+              <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+              <div>
+                <h4>Aqliy Rivojlanish</h4>
+                <p>Mantiqiy, xotirani mustahkamlovchi va diqqatni oshiruvchi o'yin mexanikasi.</p>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon"><i class="fa-solid fa-gauge-high"></i></div>
+              <div>
+                <h4>Tezkor va Yengil</h4>
+                <p>Keraksiz yuklamalarsiz, optimallashtirilgan va oflayn rejimda ham ishlay oladigan tizim.</p>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+              <div>
+                <h4>Foydalanuvchi Qulayligi</h4>
+                <p>Oddiy, tushunarli va ko'zni toliqtirmaydigan zamonaviy klassik UI dizayn.</p>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+              <div>
+                <h4>Doimiy O'sish</h4>
+                <p>Foydalanuvchilar fikr-mulohazalari asosida yangilanishlar va yangi qiziqarli o'yinlar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BIZNING O'YIN VA ILOVALARIMIZ ==================== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-brands fa-google-play"></i> Google Play Portfolio</span>
+        <h2 class="section-title">Bizning O'yin va Ilovalarimiz</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          Alfgamex tomonidan Google Play do'koniga rasman joylangan o'yin va dasturlar. Quyida barcha ma'lumotlar, ikonkalar va skrinshotlar bilan tanishishingiz mumkin.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-border-all"></i> Barchasi (2)
+        </button>
+        <button class="filter-btn" data-filter="game">
+          <i class="fa-solid fa-gamepad"></i> O'yinlar (1)
+        </button>
+        <button class="filter-btn" data-filter="app">
+          <i class="fa-solid fa-mobile-screen"></i> Ilovalar (1)
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- ================= PROJECT 1: MEMORY GAME ================= -->
+        <article class="project-card" data-category="game">
+          <div class="card-glass-header">
+            <div class="project-type-tag game-tag">
+              <i class="fa-solid fa-gamepad"></i> Rasmiy O'yin
+            </div>
+            <div class="play-badge-corner">
+              <i class="fa-brands fa-google-play"></i> Google Play
+            </div>
+          </div>
+
+          <div class="project-body">
+            <!-- Icon and Header Info -->
+            <div class="app-identity">
+              <div class="app-icon-wrap">
+                <img 
+                  src="assets/images/memory-icon.png" 
+                  alt="Memory: Brain Training Game Ikonkasi" 
+                  class="app-icon"
+                  onerror="this.src='https://play-lh.googleusercontent.com/iioHPC_Sc6TudoPKwiEHXhkaefibeuf__0RWmnrg8wX9CVNMIG8nXzxOYNYmH5sQENqZmk4FYDZ6_vJcXCu4mA=s360'"
+                >
+                <span class="verified-check" title="Tasdiqlangan ilova"><i class="fa-solid fa-check"></i></span>
+              </div>
+              <div class="app-headings">
+                <h3 class="app-title">Memory: Brain Training Game</h3>
+                <p class="app-developer">Alfgamex &bull; Dasturchi Alfa</p>
+                <div class="app-meta-badges">
+                  <span class="meta-pill"><i class="fa-solid fa-star text-gold"></i> 5.0 Reyting</span>
+                  <span class="meta-pill"><i class="fa-solid fa-puzzle-piece"></i> Boshqotirma</span>
+                  <span class="meta-pill"><i class="fa-solid fa-wifi-slash"></i> Oflayn</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screenshot / Visual Preview -->
+            <div class="app-media-preview">
+              <img 
+                src="assets/images/memory-screen1.jpg" 
+                alt="Memory o'yini skrinshoti" 
+                class="screenshot-img"
+                onerror="this.src='https://play-lh.googleusercontent.com/8jt1ZqFPJpL5raUbPckwla-9NzqnhtlJqIqvRnCpsGKEVCf8Sq_ZQVS6a8iwPIVg6VC_ZMvk12OqS2zHAxkKmw=w720-h405'"
+              >
+              <div class="media-overlay">
+                <span><i class="fa-solid fa-expand"></i> Ko'rish</span>
+              </div>
+            </div>
+
+            <!-- Short Description -->
+            <p class="app-description">
+              Miyangizni charxlang va diqqatingizni oshiring! <strong>Memory: Brain Training Game</strong> — eslab qolish qobiliyatini va vizual naqshlarni topish mahoratini sinovdan o'tkazuvchi yuqori sifatli intellektual boshqotirma o'yini.
+            </p>
+
+            <!-- Key Features Chips -->
+            <div class="features-chips">
+              <span class="chip"><i class="fa-solid fa-check"></i> 50+ Takrorlanmas Bosqichlar</span>
+              <span class="chip"><i class="fa-solid fa-check"></i> Rivojlanuvchi Qiyinchilik</span>
+              <span class="chip"><i class="fa-solid fa-check"></i> Minimalist & Chiroyli UI</span>
+              <span class="chip"><i class="fa-solid fa-check"></i> 100% Oflayn O'yin</span>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="card-footer-actions">
+              <!-- Direct Google Play Link -->
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.alfgamex.Memory" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-play-store"
+              >
+                <i class="fa-brands fa-google-play"></i>
+                <div class="btn-play-text">
+                  <small>Google Play'dan</small>
+                  <strong>Yuklab Olish</strong>
+                </div>
+              </a>
+
+              <!-- Modal Trigger -->
+              <button class="btn-details-modal" onclick="openAppModal('memory')">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Batafsil</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= PROJECT 2: TESTMAKER.TXT ================= -->
+        <article class="project-card" data-category="app">
+          <div class="card-glass-header">
+            <div class="project-type-tag app-tag">
+              <i class="fa-solid fa-mobile-screen"></i> Foydali Ilova
+            </div>
+            <div class="play-badge-corner">
+              <i class="fa-brands fa-google-play"></i> Google Play
+            </div>
+          </div>
+
+          <div class="project-body">
+            <!-- Icon and Header Info -->
+            <div class="app-identity">
+              <div class="app-icon-wrap">
+                <img 
+                  src="assets/images/testmaker-icon.png" 
+                  alt="TestMaker.TXT Ilovasi Ikonkasi" 
+                  class="app-icon"
+                  onerror="this.src='https://play-lh.googleusercontent.com/JTljdnzJghPdMxJR1rNX0iAFsKCkIwlQasx5Xbdd50EbjeBeuFdXr8-L_BfB9rZ_1QmPCnNjjaUU6loTCZCvzg=s360'"
+                >
+                <span class="verified-check" title="Tasdiqlangan ilova"><i class="fa-solid fa-check"></i></span>
+              </div>
+              <div class="app-headings">
+                <h3 class="app-title">TestMaker.TXT</h3>
+                <p class="app-developer">Alfgamex &bull; Dasturchi Alfa</p>
+                <div class="app-meta-badges">
+                  <span class="meta-pill"><i class="fa-solid fa-star text-gold"></i> 5.0 Reyting</span>
+                  <span class="meta-pill"><i class="fa-solid fa-graduation-cap"></i> Ta'lim</span>
+                  <span class="meta-pill"><i class="fa-solid fa-bolt"></i> Tezkor</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screenshot / Visual Preview -->
+            <div class="app-media-preview">
+              <img 
+                src="assets/images/testmaker-screen1.jpg" 
+                alt="TestMaker.TXT ilovasi skrinshoti" 
+                class="screenshot-img"
+                onerror="this.src='https://play-lh.googleusercontent.com/RgP-nGPzP6CBgjuk7ugvAooC2-DvAXvLusTpdp34tUCM6WxKMRvOBdO_frcFL7c0eTXfVlj-y-9jZQvS_CG0-Q=w720-h405'"
+              >
+              <div class="media-overlay">
+                <span><i class="fa-solid fa-expand"></i> Ko'rish</span>
+              </div>
+            </div>
+
+            <!-- Short Description -->
+            <p class="app-description">
+              Oddiy .TXT formatdagi matnli fayllardan bir zumda interaktiv testlar yaratish va ularni yechish uchun mo'ljallangan qulay ilova. O'qituvchilar, talabalar va repetitorlar uchun ayni muddao!
+            </p>
+
+            <!-- Key Features Chips -->
+            <div class="features-chips">
+              <span class="chip"><i class="fa-solid fa-check"></i> TXT Fayllarni Import Qilish</span>
+              <span class="chip"><i class="fa-solid fa-check"></i> Real-Vaqtda Test Yechish</span>
+              <span class="chip"><i class="fa-solid fa-check"></i> Ko'p Tanlovli Savollar</span>
+              <span class="chip"><i class="fa-solid fa-check"></i> Natijalar Tahlili</span>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="card-footer-actions">
+              <!-- Direct Google Play Link -->
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.alfgamex.testmakertxt" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-play-store"
+              >
+                <i class="fa-brands fa-google-play"></i>
+                <div class="btn-play-text">
+                  <small>Google Play'dan</small>
+                  <strong>Yuklab Olish</strong>
+                </div>
+              </a>
+
+              <!-- Modal Trigger -->
+              <button class="btn-details-modal" onclick="openAppModal('testmaker')">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Batafsil</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STUDIO AFZALLIKLARI (WHY ALFGAMEX) ==================== -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-shield-halved"></i> Bizning Tamoyillar</span>
+        <h2 class="section-title">Nega Alfgamex Loyihalari?</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          Biz har bir o'yinda zavq va har bir ilovada haqiqiy amaliy foydani ta'minlaymiz.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="feature-heading">Zamonaviy va Toza Dizayn</h3>
+          <p class="feature-desc">
+            Ortiqcha chalg'ituvchi reklamalar va chalkash tugmalarsiz, zamonaviy va tushunarli foydalanuvchi interfeysi (UI).
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <i class="fa-solid fa-shield-virus"></i>
+          </div>
+          <h3 class="feature-heading">Xavfsiz va Ishonchli</h3>
+          <p class="feature-desc">
+            Google Play xavfsizlik talablariga to'liq javob beruvchi, shaxsiy ma'lumotlarni noqonuniy yig'maydigan toza kod.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <i class="fa-solid fa-mobile"></i>
+          </div>
+          <h3 class="feature-heading">Qurilmalarga Moslashuvchan</h3>
+          <p class="feature-desc">
+            Har qanday Android smartfon va planshetlarda tez, qotmasdan va batareyani ortiqcha sarflamasdan ishlaydi.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="feature-heading">Foydalanuvchi Bilan Aloqa</h3>
+          <p class="feature-desc">
+            Dasturchi Alfa har bir fikr-mulohazani shaxsan o'rganib chiqadi va ilovalarni doimiy ravishda takomillashtirib boradi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ALOQA VA HAMKORLIK ==================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-header">
+          <span class="contact-pill"><i class="fa-solid fa-envelope"></i> Bog'lanish</span>
+          <h2 class="contact-title">Dasturchi Alfa Bilan Bog'lanish</h2>
+          <p class="contact-subtitle">
+            Savollaringiz, takliflaringiz yoki yangi o'yin g'oyalaringiz bormi? Fikr-mulohazangiz biz uchun juda qadrli!
+          </p>
+        </div>
+
+        <div class="contact-methods">
+          <a href="https://play.google.com/store/apps/developer?id=Alfgamex" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <div class="c-icon"><i class="fa-brands fa-google-play"></i></div>
+            <div class="c-info">
+              <span class="c-name">Google Play Profil</span>
+              <span class="c-val">Alfgamex Dasturchi Sahifasi</span>
+            </div>
+          </a>
+
+          <a href="mailto:contact@alfgamex.uz" class="contact-item">
+            <div class="c-icon"><i class="fa-solid fa-at"></i></div>
+            <div class="c-info">
+              <span class="c-name">Email Pochta</span>
+              <span class="c-val">alfgamex.studio@gmail.com</span>
+            </div>
+          </a>
+
+          <div class="contact-item">
+            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="c-info">
+              <span class="c-name">Joylashuv</span>
+              <span class="c-val">O'zbekiston</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKY BLUE NEON FOOTER LAYER ==================== -->
+  <footer class="footer-wrapper">
+    <div class="container footer-container">
+      <!-- Footer Brand Column -->
+      <div class="footer-col footer-about">
+        <!-- Logo: alf (ko'k) + game (oq) + x (ko'k) -->
+        <div class="footer-logo">
+          <span class="part-alf">alf</span><span class="part-game">game</span><span class="part-x">x</span>
+          <span class="footer-logo-tag">STUDIO</span>
+        </div>
+        <p class="footer-desc">
+          Mustaqil o'yin va dastur studiyasi. Sifat, samimiyat va intellektual ko'ngilochar loyihalar makoni.
+        </p>
+        <div class="footer-est-info">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>Asos solingan sana: <strong>17-fevral, 2025-yil</strong></span>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Tezkor Havolalar</h4>
+        <ul class="footer-links">
+          <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Asosiy Sahifa</a></li>
+          <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> Dasturchi Alfa</a></li>
+          <li><a href="#projects"><i class="fa-solid fa-chevron-right"></i> Bizning Loyihalar</a></li>
+          <li><a href="#features"><i class="fa-solid fa-chevron-right"></i> Afzalliklar</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Aloqa</a></li>
+        </ul>
+      </div>
+
+      <!-- Projects Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Play Store Loyihalari</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://play.google.com/store/apps/details?id=com.alfgamex.Memory" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-gamepad"></i> Memory: Brain Training Game
+            </a>
+          </li>
+          <li>
+            <a href="https://play.google.com/store/apps/details?id=com.alfgamex.testmakertxt" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-file-code"></i> TestMaker.TXT Ilovasi
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Developer Info Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Dasturchi</h4>
+        <div class="footer-dev-badge">
+          <div class="f-dev-icon"><i class="fa-solid fa-user-gear"></i></div>
+          <div>
+            <strong>Dasturchi: Alfa</strong>
+            <p>Solo Indie Game Developer</p>
+          </div>
+        </div>
+        <div class="footer-copyright-note">
+          Har bir kod va dizayn mehr bilan yaratilgan.
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2025 - 2026 <strong>Alfgamex Studio</strong>. Barcha huquqlar himoyalangan.</p>
+        <p class="footer-credit">Dasturchi: <strong>Alfa</strong> &bull; Asos solingan: <strong>17.02.2025</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== APP DETAILS MODAL ==================== -->
+  <div class="modal-backdrop" id="appModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeAppModal()" aria-label="Yopish">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header">
+        <img id="modalAppIcon" src="" alt="App Icon" class="modal-icon">
+        <div class="modal-title-group">
+          <h3 id="modalAppTitle">App Title</h3>
+          <p id="modalAppCategory" class="modal-cat">Kategoriya</p>
+          <div class="modal-meta-row">
+            <span class="badge-star"><i class="fa-solid fa-star"></i> 5.0</span>
+            <span class="badge-dev">Alfgamex (Alfa)</span>
+            <span class="badge-ver">Google Play</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- Screenshot Preview -->
+        <div class="modal-media-wrapper">
+          <img id="modalScreenshot" src="" alt="App Screenshot" class="modal-screenshot">
+        </div>
+
+        <div class="modal-section-title">
+          <i class="fa-solid fa-file-lines"></i> Ilova / O'yin Haqida
+        </div>
+        <div id="modalAppDesc" class="modal-desc-content">
+          <!-- Description dynamically injected -->
+        </div>
+
+        <div class="modal-section-title">
+          <i class="fa-solid fa-list-check"></i> Asosiy Xususiyatlar
+        </div>
+        <ul id="modalAppFeatures" class="modal-features-list">
+          <!-- Features dynamically injected -->
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-copy-link" id="modalCopyBtn" onclick="copyCurrentAppLink()">
+          <i class="fa-solid fa-copy"></i>
+          <span>Havolani nusxalash</span>
+        </button>
+
+        <a id="modalPlayLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sky-solid">
+          <i class="fa-brands fa-google-play"></i>
+          <span>Google Play'da Ochish</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Xabar</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
