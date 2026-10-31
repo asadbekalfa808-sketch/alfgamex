@@ -1,12 +1,13 @@
 /* ========================================================
    ALFGAMEX STUDIO - OFFICIAL WEBSITE STYLESHEET
    Themes: Dark Gaming Studio (Default) & Modern Classic Light
+   Languages: English (Default) & Uzbek
    Developer: Alfa | Founded: February 17, 2025
 ======================================================== */
 
 /* ================= THEME VARIABLES ================= */
 :root {
-  /* Brand Specific Violet / Siyoh Rang Palette */
+  /* Brand Specific Violet Palette */
   --violet-deep: #581c87;
   --violet-primary: #7c3aed;
   --violet-bright: #9333ea;
@@ -19,7 +20,7 @@
   --cyan-glow: rgba(0, 212, 255, 0.35);
   --blue-deep: #1e1b4b;
 
-  /* Fonts */
+  /* Typography */
   --font-logo: 'Orbitron', 'Outfit', sans-serif;
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -40,7 +41,7 @@
   --bg-card: #0f1423;
   --bg-card-alt: #141b30;
   --bg-card-hover: #19223c;
-  --bg-navbar: rgba(11, 15, 26, 0.88);
+  --bg-navbar: rgba(11, 15, 26, 0.92);
   --bg-top-bar: #070910;
   --bg-footer: #06080e;
   --bg-input: #111728;
@@ -71,7 +72,7 @@
   --bg-card: #ffffff;
   --bg-card-alt: #f1f5f9;
   --bg-card-hover: #e2e8f0;
-  --bg-navbar: rgba(255, 255, 255, 0.9);
+  --bg-navbar: rgba(255, 255, 255, 0.94);
   --bg-top-bar: #0f172a;
   --bg-footer: #0f172a;
   --bg-input: #f8fafc;
@@ -233,6 +234,7 @@ button {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo-emblem-wrap {
@@ -243,6 +245,7 @@ button {
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
   border: 1px solid rgba(168, 85, 247, 0.4);
   transition: var(--transition-normal);
+  flex-shrink: 0;
 }
 
 .brand-logo:hover .logo-emblem-wrap {
@@ -257,7 +260,7 @@ button {
   object-fit: cover;
 }
 
-/* Logo Text: Alf (to'q siyoh) + GAme (oq) + X (to'q siyoh) */
+/* Logo Text: Alf (violet) + GAme (white) + X (violet) */
 .logo-text {
   font-family: var(--font-heading);
   font-size: 1.7rem;
@@ -269,6 +272,7 @@ button {
   background-color: var(--logo-bg-wrapper);
   border-radius: var(--radius-md);
   transition: var(--transition-fast);
+  white-space: nowrap;
 }
 
 .part-alf {
@@ -325,14 +329,47 @@ button {
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
 }
 
-/* Nav Actions (Theme Switcher + Google Play) */
+/* Nav Actions Container */
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-/* Theme Toggle Button (Qora / Oq switch) */
+/* ================= LANGUAGE SWITCHER (EN | UZ) ================= */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  box-shadow: var(--shadow-card);
+  gap: 2px;
+}
+
+.lang-btn {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  transition: var(--transition-fast);
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--text-main);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, var(--violet-primary), var(--violet-bright));
+  color: #ffffff;
+  box-shadow: 0 0 12px var(--violet-glow);
+}
+
+/* ================= THEME TOGGLE BUTTON ================= */
 .theme-toggle-btn {
   display: inline-flex;
   align-items: center;
@@ -346,6 +383,7 @@ button {
   font-weight: 700;
   box-shadow: var(--shadow-card);
   transition: var(--transition-normal);
+  white-space: nowrap;
 }
 
 .theme-toggle-btn:hover {
@@ -390,6 +428,7 @@ button {
   color: #f59e0b;
 }
 
+/* Google Play Desktop Navbar Button */
 .btn-nav-action {
   display: inline-flex;
   align-items: center;
@@ -402,6 +441,7 @@ button {
   border-radius: var(--radius-full);
   box-shadow: var(--shadow-neon);
   transition: var(--transition-normal);
+  white-space: nowrap;
 }
 
 .btn-nav-action:hover {
@@ -412,9 +452,16 @@ button {
 
 .mobile-toggle {
   display: none;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--text-main);
-  padding: 8px;
+  padding: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ================= HERO SECTION ================= */
@@ -491,7 +538,6 @@ button {
   margin-bottom: 18px;
 }
 
-/* Big Hero Alf (to'q siyoh) GAme (oq) X (to'q siyoh) */
 .brand-huge {
   display: inline-block;
   padding: 0 4px;
@@ -563,7 +609,7 @@ button {
   text-decoration: none;
 }
 
-/* Jiddiy Studio Outline */
+/* Serious Studio Outline Button */
 .btn-outline-serious {
   background: var(--bg-card);
   color: var(--text-main);
@@ -631,7 +677,7 @@ button {
   background-color: var(--border-subtle);
 }
 
-/* ================= HERO EMBLEM SHOWCASE CENTERPIECE ================= */
+/* ================= HERO EMBLEM SHOWCASE ================= */
 .hero-showcase {
   position: relative;
   display: flex;
@@ -742,7 +788,6 @@ button {
   box-shadow: 0 0 8px var(--cyan-neon);
 }
 
-/* Floating badges around emblem */
 .floating-badge {
   position: absolute;
   background: var(--bg-card);
@@ -1326,7 +1371,6 @@ button {
   margin-top: auto;
 }
 
-/* Play Store Download Button */
 .btn-play-store {
   flex: 1;
   display: inline-flex;
@@ -1375,7 +1419,6 @@ button {
   color: #ffffff;
 }
 
-/* Details Modal Button */
 .btn-details-modal {
   display: inline-flex;
   align-items: center;
@@ -1969,7 +2012,7 @@ button {
   font-size: 1.1rem;
 }
 
-/* ================= RESPONSIVE BREAKPOINTS ================= */
+/* ================= RESPONSIVE BREAKPOINTS (MOBILE FIRST ADAPTATION) ================= */
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
@@ -2012,61 +2055,203 @@ button {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .top-announcement {
+    padding: 6px 0;
+    font-size: 0.78rem;
+  }
+
   .announcement-content {
     justify-content: center;
     text-align: center;
+    gap: 4px;
   }
 
+  /* Compact Navbar for Mobile */
+  .navbar {
+    height: 64px;
+  }
+
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .logo-emblem-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+    padding: 2px 6px;
+  }
+
+  .logo-badge {
+    display: none; /* Hide STUDIO badge on small mobile to save space */
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  /* Hide textual label in theme switcher on mobile, keep sleek icon button */
+  .theme-toggle-btn {
+    padding: 7px 10px;
+  }
+
+  .theme-toggle-btn .theme-text {
+    display: none;
+  }
+
+  /* Hide direct Google Play button in mobile top bar (accessible inside menu & hero) */
+  .btn-nav-action {
+    display: none;
+  }
+
+  /* Language Switcher compact size */
+  .lang-btn {
+    padding: 4px 7px;
+    font-size: 0.72rem;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+  }
+
+  /* Mobile Slide-down Drawer */
   .nav-links {
     position: fixed;
-    top: 74px;
+    top: 64px;
     left: 0;
     right: 0;
     background: var(--bg-card);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 24px;
-    gap: 12px;
+    padding: 20px 16px;
+    gap: 10px;
     border-bottom: 1px solid var(--border-accent);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    transform: translateY(-130%);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    transform: translateY(-140%);
     transition: transform var(--transition-normal);
+    z-index: 999;
   }
 
   .nav-links.mobile-open {
     transform: translateY(0);
   }
 
-  .mobile-toggle {
-    display: block;
+  .nav-link {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 16px;
+  }
+
+  .hero-section {
+    padding: 60px 0 50px 0;
   }
 
   .hero-title {
-    font-size: 2.6rem;
+    font-size: 2.3rem;
   }
 
   .hero-subtitle-tag {
-    font-size: 1.1rem;
-    letter-spacing: 4px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-lead {
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .stat-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .emblem-card-glow {
+    max-width: 320px;
+    padding: 20px;
+  }
+
+  .emblem-frame {
+    width: 180px;
+    height: 180px;
+  }
+
+  .floating-badge {
+    display: none; /* Hide floating badges on narrow mobile to avoid overlap */
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-story-card {
+    padding: 24px;
   }
 
   .studio-values-grid {
     grid-template-columns: 1fr;
   }
 
+  .project-body {
+    padding: 20px;
+  }
+
+  .app-identity {
+    gap: 14px;
+  }
+
+  .app-icon-wrap {
+    width: 64px;
+    height: 64px;
+  }
+
+  .app-title {
+    font-size: 1.25rem;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 30px 20px;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-item {
+    width: 100%;
   }
 
   .footer-container {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding: 40px 16px 30px 16px;
   }
 
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
+    gap: 8px;
   }
 
   .card-footer-actions {
@@ -2080,16 +2265,36 @@ button {
   }
 
   .modal-dialog {
-    max-height: 95vh;
+    max-height: 94vh;
+  }
+
+  .modal-header {
+    padding: 20px;
+  }
+
+  .modal-body {
+    padding: 20px;
   }
 
   .modal-footer {
     flex-direction: column;
+    padding: 16px 20px;
   }
 
   .btn-copy-link,
   .modal-footer .btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-text {
+    font-size: 1.15rem;
+  }
+
+  .lang-btn {
+    padding: 4px 6px;
+    font-size: 0.7rem;
   }
 }
