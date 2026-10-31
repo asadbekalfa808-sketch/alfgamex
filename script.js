@@ -1,16 +1,19 @@
 /**
- * ALFGAMEX STUDIO - OFFICIAL WEBSITE SCRIPT
- * Developer: Alfa
- * Founded: February 17, 2025
+ * ALFGAMEX STUDIO - OFFICIAL SCRIPT
+ * Developer: Alfa | Founded: February 17, 2025
  */
 
-// App data dictionary with full verified Google Play information
+// App database with updated Play Store assets and multiple screenshots
 const APP_DATABASE = {
   memory: {
     title: "Memory: Brain Training Game",
     category: "Mantiqiy Boshqotirma & Aqliy Mashq",
     icon: "assets/images/memory-icon.png",
-    screenshot: "assets/images/memory-screen1.jpg",
+    screenshots: [
+      "assets/images/memory-screen1.jpg",
+      "assets/images/memory-screen2.jpg",
+      "assets/images/memory-screen3.jpg"
+    ],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.alfgamex.Memory",
     description: `Miyangizni charxlang va diqqatingizni oshiring! Memory: Brain Training Game — eslab qolish qobiliyatini va vizual naqshlarni topish mahoratini sinovdan o'tkazuvchi yuqori sifatli intellektual boshqotirma o'yini.
 
@@ -21,18 +24,22 @@ Qanday o'ynaladi:
 2. Ularning o'rnini eslab qoling.
 3. Plitkalar yashiringanda, bosqichni yakunlash uchun to'g'ri katakchalarni bosing!`,
     features: [
-      "50+ Takrorlanmas Bosqichlar: Turli xil to'r (grid) o'lchamlaridagi xotira sinovlari.",
+      "50+ Takrorlanmas Bosqich: Turli xil to'r (grid) o'lchamlaridagi xotira sinovlari.",
       "Rivojlanuvchi Qiyinchilik: O'yinda o'sganingiz sari boshqotirmalar qiziqroq va murakkabroq bo'ladi.",
-      "Sleek & Minimalist Dizayn: Keraksiz chalg'itishlarsiz sof va qulay o'yin jarayoni.",
+      "Sleek & Jiddiy Dizayn: Keraksiz chalg'itishlarsiz toza va zamonaviy o'yin jarayoni.",
       "100% Oflayn O'yin: Internet talab qilinmaydi, istalgan joyda mashq qiling.",
-      "Miya Salomatligi: Qisqa muddatli xotira va konsentratsiyani mustahkamlash uchun ideal mashg'ulot."
+      "Miya Salomatligi: Qisqa muddatli xotira va konsentratsiyani mustahkamlash uchun ideal vosita."
     ]
   },
   testmaker: {
     title: "TestMaker.TXT",
     category: "Ta'lim & Foydali Utilit Dastur",
     icon: "assets/images/testmaker-icon.png",
-    screenshot: "assets/images/testmaker-screen1.jpg",
+    screenshots: [
+      "assets/images/testmaker-screen1.jpg",
+      "assets/images/testmaker-screen2.jpg",
+      "assets/images/testmaker-screen3.jpg"
+    ],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.alfgamex.testmakertxt",
     description: `Oddiy .TXT formatdagi matnli fayllardan bir zumda interaktiv testlar yaratish va ularni topshirish uchun eng qulay va samarali ilova!
 
@@ -52,7 +59,33 @@ Vaqt va kuchingizni tejang: Tayyor TXT fayllaringizni import qiling va barcha te
 
 let currentModalApp = null;
 
-// ================= Open Modal =================
+// ================= THEME TOGGLE (DARK/LIGHT) =================
+function initTheme() {
+  const savedTheme = localStorage.getItem('alfgamex_theme') || 'dark';
+  applyTheme(savedTheme);
+
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+      showToast(newTheme === 'dark' ? "Tungi (Qora) rejim yoqildi" : "Kunduzgi (Klassik Oq) rejim yoqildi");
+    });
+  }
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('alfgamex_theme', theme);
+
+  const themeLabel = document.getElementById('themeLabel');
+  if (themeLabel) {
+    themeLabel.textContent = theme === 'dark' ? "Tungi" : "Kunduzgi";
+  }
+}
+
+// ================= MODAL LOGIC =================
 function openAppModal(appKey) {
   const data = APP_DATABASE[appKey];
   if (!data) return;
@@ -64,6 +97,7 @@ function openAppModal(appKey) {
   const title = document.getElementById('modalAppTitle');
   const cat = document.getElementById('modalAppCategory');
   const screenshot = document.getElementById('modalScreenshot');
+  const thumbnailsContainer = document.getElementById('modalThumbnails');
   const desc = document.getElementById('modalAppDesc');
   const featuresList = document.getElementById('modalAppFeatures');
   const playLink = document.getElementById('modalPlayLink');
@@ -72,12 +106,28 @@ function openAppModal(appKey) {
   icon.alt = data.title;
   title.textContent = data.title;
   cat.textContent = data.category;
-  screenshot.src = data.screenshot;
-  screenshot.alt = `${data.title} Skrinshoti`;
   desc.textContent = data.description;
   playLink.href = data.playStoreUrl;
 
-  // Clear and inject features
+  // Set primary screenshot
+  screenshot.src = data.screenshots[0];
+  screenshot.alt = `${data.title} Skrinshoti`;
+
+  // Build screenshot thumbnails
+  thumbnailsContainer.innerHTML = '';
+  data.screenshots.forEach((scr, idx) => {
+    const btn = document.createElement('button');
+    btn.className = `thumb-btn ${idx === 0 ? 'active' : ''}`;
+    btn.innerHTML = `<img src="${scr}" alt="Thumb ${idx + 1}">`;
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      screenshot.src = scr;
+    });
+    thumbnailsContainer.appendChild(btn);
+  });
+
+  // Features list
   featuresList.innerHTML = '';
   data.features.forEach(feat => {
     const li = document.createElement('li');
@@ -90,7 +140,6 @@ function openAppModal(appKey) {
   document.body.style.overflow = 'hidden';
 }
 
-// ================= Close Modal =================
 function closeAppModal() {
   const modal = document.getElementById('appModal');
   if (modal) {
@@ -100,7 +149,7 @@ function closeAppModal() {
   }
 }
 
-// Close modal on backdrop click
+// Close on backdrop
 document.addEventListener('click', (e) => {
   const modal = document.getElementById('appModal');
   if (e.target === modal) {
@@ -108,14 +157,14 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Close modal on Escape key
+// Close on Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeAppModal();
   }
 });
 
-// ================= Copy Link Helper =================
+// Copy link
 function copyCurrentAppLink() {
   if (!currentModalApp) return;
   const link = currentModalApp.playStoreUrl;
@@ -123,7 +172,6 @@ function copyCurrentAppLink() {
   navigator.clipboard.writeText(link).then(() => {
     showToast("Google Play havolasi nusxalandi!");
   }).catch(() => {
-    // Fallback for older browsers
     const textarea = document.createElement('textarea');
     textarea.value = link;
     document.body.appendChild(textarea);
@@ -134,7 +182,7 @@ function copyCurrentAppLink() {
   });
 }
 
-// ================= Toast Notification =================
+// Toast notification
 function showToast(message) {
   const toast = document.getElementById('toastNotification');
   const toastMsg = document.getElementById('toastMsg');
@@ -148,8 +196,11 @@ function showToast(message) {
   }, 3200);
 }
 
-// ================= Filter Tabs =================
+// ================= DOM INIT =================
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+
+  // Projects filter tabs
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
@@ -179,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ================= Mobile Navigation Toggle =================
+  // Mobile menu toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const navLinks = document.getElementById('navLinks');
 
@@ -196,7 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close mobile nav on link click
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('mobile-open');
@@ -209,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ================= Active Link on Scroll =================
+  // Active link on scroll
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset + 120;

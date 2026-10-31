@@ -1,38 +1,38 @@
-# Alfgamex Studio - Rasmiy Veb-Sayt
+# AlfGAmeX Studio - Rasmiy Veb-Sayt (Yangilangan Versiya)
 
-Mustaqil indie o'yin va ilovalar dasturchisi **Alfa** tomonidan asos solingan **Alfgamex Studio** rasmiy portfolio veb-sayti.
+Mustaqil indie o'yin va ilovalar dasturchisi **Alfa** tomonidan asos solingan **AlfGAmeX Studio** rasmiy portfeli.
 
-- **Studiya nomi:** Alfgamex Studio
+- **Studiya nomi:** AlfGAmeX Studio
 - **Asos solingan sana:** 17-fevral, 2025-yil
 - **Dasturchi:** Alfa (Mustaqil / Solo Indie Developer)
-- **Dizayn uslubi:** Zamonaviy klassik oq fon, osmon ko'k (sky blue neon) blurli glassmorphism oynalar, yumshoq animatsiyalar.
+- **UI Uslubi:** Jiddiy Qora Tungi (OLED / Cyber Studio) va Klassik Oq Kunduzgi rejimlari.
+- **Logotip formulasi:**
+  - `Alf`: To'q siyoh rang (Deep Violet / Neon Violet `#a855f7`)
+  - `GAme`: Oq rang (`#ffffff`)
+  - `X`: To'q siyoh rang (Deep Violet / Neon Violet `#a855f7`)
+- **Rasmiy Emblema:** `assets/images/alfgamex-emblem.png` va brauzer sarlavha panelida `assets/images/favicon.png`.
 
 ---
 
-## 🚀 Loyihalar (Google Play)
+## 🚀 Loyihalar (Google Play Yangi Versiyalari)
 
 1. **Memory: Brain Training Game** (O'yin)
    - Paket: `com.alfgamex.Memory`
-   - Google Play: [https://play.google.com/store/apps/details?id=com.alfgamex.Memory](https://play.google.com/store/apps/details?id=com.alfgamex.Memory)
-   - Xususiyatlari: 50+ dan ortiq daraja, minimalist chiroyli dizayn, oflayn boshqotirma.
+   - Play Store: [https://play.google.com/store/apps/details?id=com.alfgamex.Memory](https://play.google.com/store/apps/details?id=com.alfgamex.Memory)
+   - Yangi ikonka va yangi skrinshotlar to'plami bilan yangilandi.
 
 2. **TestMaker.TXT** (Foydali Ilova)
    - Paket: `com.alfgamex.testmakertxt`
-   - Google Play: [https://play.google.com/store/apps/details?id=com.alfgamex.testmakertxt](https://play.google.com/store/apps/details?id=com.alfgamex.testmakertxt)
-   - Xususiyatlari: Oddiy TXT fayllardan bir zumda interaktiv testlar tuzish, real-vaqtda test topshirish.
+   - Play Store: [https://play.google.com/store/apps/details?id=com.alfgamex.testmakertxt](https://play.google.com/store/apps/details?id=com.alfgamex.testmakertxt)
+   - Yangi skrinshotlar va batafsil xususiyatlar bilan yangilandi.
 
 ---
 
-## 🎨 Dizayn va Ranglar Uyg'unligi
+## 🌓 Tungi va Kunduzgi Rejimlar (Dark & Light Theme)
 
-- **Logotip formulasi:**
-  - `alf`: Ko'k (Neon Sky Blue `#a5f3fc` / `#38bdf8`)
-  - `game`: Oq (`#ffffff`)
-  - `x`: Ko'k (`#a5f3fc` / `#38bdf8`)
-- **Tepadagi Navbar:** Osmon ko'k neon blur qatlam (`rgba(14, 165, 233, 0.88)` + `backdrop-filter: blur(16px)`).
-- **Asosiy orqa fon:** Sof oq va yengil osmon ko'k tusli klassik fon.
-- **Eng pastki qatlam (Footer):** Navbarga o'xshash osmon ko'k gradientli to'liq qatlam.
-- **Tugmalar:** Osmon ko'k neon effektlar va micro-interactions.
+- Saytga kirganda avtomatik ravishda **jiddiy qora (dark)** rejimda ochiladi.
+- Tepadagi navbar panelidagi **"Tungi / Kunduzgi"** tugmasi orqali istalgan paytda bir marta bosish bilan klassik oq rejimga o'tish mumkin.
+- Tanlangan rejim brauzer xotirasida (`localStorage`) saqlanib qoladi.
 
 ---
 
@@ -40,31 +40,20 @@ Mustaqil indie o'yin va ilovalar dasturchisi **Alfa** tomonidan asos solingan **
 
 ```
 alfgamex-studio/
-├── index.html         # Asosiy semantik HTML5 sahifa
-├── styles.css         # Custom modern CSS3 (Glassmorphism & Responsive)
-├── script.js          # Modal oynalar, filtrlar va interaktivlik
+├── index.html                  # Yangilangan semantik HTML5 sahifa
+├── styles.css                  # Qora va Oq mavzuli professional CSS3
+├── script.js                   # Mavzuni almashtirish, galereya va modallar
 ├── assets/
 │   └── images/
-│       ├── memory-icon.png       # Memory o'yini rasmiy ikonkasi
-│       ├── testmaker-icon.png    # TestMaker ilovasi rasmiy ikonkasi
-│       ├── memory-screen1.jpg    # Memory skrinshoti
-│       └── testmaker-screen1.jpg # TestMaker skrinshoti
-└── README.md          # Qo'llanma
+│       ├── alfgamex-emblem.png # Asosiy rasmiy studiya emblemasi
+│       ├── favicon.png         # Brauzer tabidagi rasmiy ikonka
+│       ├── memory-icon.png     # Yangilangan Memory o'yini ikonkasi
+│       ├── memory-screen1.jpg  # Yangi skrinshot 1
+│       ├── memory-screen2.jpg  # Yangi skrinshot 2
+│       ├── memory-screen3.jpg  # Yangi skrinshot 3
+│       ├── testmaker-icon.png  # TestMaker ikonkasi
+│       ├── testmaker-screen1.jpg # Yangi skrinshot 1
+│       ├── testmaker-screen2.jpg # Yangi skrinshot 2
+│       └── testmaker-screen3.jpg # Yangi skrinshot 3
+└── README.md
 ```
-
----
-
-## ⚡ Saytni Kompyuterda Ochish
-
-1. `index.html` faylini istalgan brauzerda (Chrome, Edge, Firefox, Safari) 2 marta bosib oching.
-2. Yoki VS Code Live Server orqali:
-   - VS Code-da ushbu papkani oching (`File -> Open Folder -> C:\Users\Admin\.gemini\antigravity\scratch\alfgamex-studio`)
-   - "Go Live" tugmasini bosing.
-
----
-
-## 🌐 Bepul Internetga Joylash (Hosting)
-
-Ushbu veb-sayt toza HTML/CSS/JS texnologiyalarida yaratilgani sababli uni istalgan bepul hostingga 1 daqiqada yuklash mumkin:
-- **GitHub Pages:** Repozitoriy ochib, fayllarni yuklang va Settings -> Pages orqali yoqing.
-- **Vercel / Netlify:** Papkani to'g'ridan-to'g'ri sudrab tashlash (drag and drop) orqali bepul `alfgamex.vercel.app` domeni olasiz.
